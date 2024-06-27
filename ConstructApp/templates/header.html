@@ -12,23 +12,16 @@
     <ul class="dl-menu">
     <li><a href="{% url 'home' %}">Home</a>
     </li>
-    <li><a href="{% url 'home' %}">About</a>
-    <ul>
-    <li><a href="about-us.html">About Us</a></li>
-    <li><a href="about-company.html">About Company</a></li>
-    </ul>
+    <li><a href="{% url 'about' %}">About Us</a>
+    
     </li>
-    <li><a href="{% url 'home' %}">Services</a>
-    <ul>
-    <li><a href="services-1.html">Services 01</a></li>
-    <li><a href="services-2.html">Services 02</a></li>
-    </ul>
+    <li><a href="{% url 'services' %}">Services</a>
+   
     </li>
     <li><a href="{% url 'home' %}">Pages</a>
     <ul>
-    <li><a href="projects.html">Our Projects</a></li>
-     <li><a href="project-single.html">Project Single</a></li>
-    <li><a href="team.html">Our Team</a></li>
+    <li><a href="{% url 'project' %}">Our Projects</a></li>
+    <li><a href="{% url 'team' %}">Our Team</a></li>
     <li><a href="testimonial.html">Testimonial</a></li>
     <li><a href="404.html">404 Error</a></li>
     </ul>
@@ -40,7 +33,7 @@
     <li><a href="blog-single.html">Blog Single</a></li>
     </ul>
     </li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
     </ul>
     </div>
     <div class="header-right">
