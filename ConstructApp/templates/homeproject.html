@@ -14,51 +14,22 @@
     </div>
     </div>
     <div id="projects-carousel" class="projects-carousel box-shadow owl-carousel">
-    <div class="project-item">
-    <img src="{%static ''%}img/project-1.jpg" alt="projects">
+    
+        {% for p in sliding_image %}
+
+
+    <div class="project-item" >
+    <img src="{{p.image.url}}" style="height:270px" alt="projects">
     <div class="overlay"></div>
-    <a href="{%static ''%}img/project-1.jpg" class="view-icon img-popup" data-gall="project"> <i class="fas fa-expand"></i></a>
+    <a href="{{p.image.url}}" class="view-icon img-popup" data-gall="project"> <i class="fas fa-expand"></i></a>
     <div class="projects-content">
-    <a href="#" class="category">Interior</a>
-    <h3><a href="#" class="tittle">Rectangular house near italy</a></h3>
+    <a href="#" class="category">{{p.cetagory}}</a>
+    <h3><a href="{% url 'singleproject' id=p.id %}" class="tittle">{{p.title}}</a></h3>
     </div>
     </div>
-    <div class="project-item">
-    <img src="{%static ''%}img/project-2.jpg" alt="projects">
-    <div class="overlay"></div>
-    <a href="{%static ''%}img/project-2.jpg" class="view-icon img-popup" data-gall="project"> <i class="fas fa-expand"></i></a>
-    <div class="projects-content">
-    <a href="#" class="category">Architecture</a>
-    <h3><a href="#" class="tittle">Cathedral of brasilia brasilia</a></h3>
-    </div>
-    </div>
-    <div class="project-item">
-    <img src="{%static ''%}img/project-3.jpg" alt="projects">
-    <div class="overlay"></div>
-    <a href="{%static ''%}img/project-3.jpg" class="view-icon img-popup" data-gall="project"> <i class="fas fa-expand"></i></a>
-    <div class="projects-content">
-    <a href="#" class="category">Design</a>
-    <h3><a href="#" class="tittle">Harpa concert hall reykjavik</a></h3>
-    </div>
-    </div>
-    <div class="project-item">
-    <img src="{%static ''%}img/project-4.jpg" alt="projects">
-    <div class="overlay"></div>
-    <a href="{%static ''%}img/project-4.jpg" class="view-icon img-popup" data-gall="project"> <i class="fas fa-expand"></i></a>
-    <div class="projects-content">
-    <a href="#" class="category">Architecture</a>
-    <h3><a href="#" class="tittle">Milwauke museum wisconsin</a></h3>
-    </div>
-    </div>
-    <div class="project-item">
-    <img src="{%static ''%}img/project-5.jpg" alt="projects">
-    <div class="overlay"></div>
-    <a href="{%static ''%}img/project-5.jpg" class="view-icon img-popup" data-gall="project"> <i class="fas fa-expand"></i></a>
-    <div class="projects-content">
-    <a href="#" class="category">Design</a>
-    <h3><a href="#" class="tittle">The dancing house prague</a></h3>
-    </div>
-    </div>
+    {% endfor %}
+   
+    
     </div>
     </div>
     </section>

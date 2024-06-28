@@ -9,9 +9,11 @@ urlpatterns = [
     path('', include('ConstructApp.urls')),
     path('bm/', include('BmApp.urls')), 
     path('services/', include('servicesapp.urls')), 
+    path('bookstore/', include('BookStoreApp.urls')), 
     
    
 ]
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

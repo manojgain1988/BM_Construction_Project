@@ -9,61 +9,24 @@
     <div class="row">
     <div class="col-lg-10 offset-lg-1">
     <div id="service-carousel" class="service-carousel box-shadow owl-carousel">
+
+        {% for hs in services %}
+          
     <div class="service-item">
     <div class="service-icon">
-    <i class="flaticon-3d-printer"></i>
+    <i class="{{hs.icon}}"></i>
     </div>
-    <h3>General Building</h3>
-    <p>We are committed a sustainable future fostering a collaborative spirit.</p>
+    <h3>{{hs.title}}</h3>
+    <p>{{hs.details}}.</p>
     <a href="#" class="read-more">Read More</a>
     <div class="overlay-icon">
-    <i class="flaticon-3d-printer"></i>
+    <i class="{{hs.icon}}"></i>
     </div>
     </div>
-    <div class="service-item">
-    <div class="service-icon">
-    <i class="flaticon-industrial-robot"></i>
-    </div>
-    <h3>Building Construction</h3>
-    <p>We are committed a sustainable future fostering a collaborative spirit.</p>
-    <a href="#" class="read-more">Read More</a>
-    <div class="overlay-icon">
-    <i class="flaticon-industrial-robot"></i>
-    </div>
-    </div>
-    <div class="service-item">
-    <div class="service-icon">
-    <i class="flaticon-assembly-line"></i>
-    </div>
-    <h3>Refurbishments</h3>
-    <p>We are committed a sustainable future fostering a collaborative spirit.</p>
-    <a href="#" class="read-more">Read More</a>
-    <div class="overlay-icon">
-    <i class="flaticon-assembly-line"></i>
-    </div>
-    </div>
-    <div class="service-item">
-    <div class="service-icon">
-    <i class="flaticon-conveyor"></i>
-    </div>
-    <h3>Building Renovation</h3>
-    <p>We are committed a sustainable future fostering a collaborative spirit.</p>
-    <a href="#" class="read-more">Read More</a>
-    <div class="overlay-icon">
-     <i class="flaticon-conveyor"></i>
-    </div>
-    </div>
-    <div class="service-item">
-    <div class="service-icon">
-    <i class="flaticon-control-system"></i>
-    </div>
-    <h3>Architectural Plans</h3>
-    <p>We are committed a sustainable future fostering a collaborative spirit.</p>
-    <a href="#" class="read-more">Read More</a>
-    <div class="overlay-icon">
-    <i class="flaticon-control-system"></i>
-    </div>
-    </div>
+   
+    {% endfor %}
+    
+    
     </div>
     </div>
     </div>

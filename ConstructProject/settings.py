@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ConstructApp',
     'BmApp',
     'servicesapp',
+    'BookStoreApp',
   
 
 ]

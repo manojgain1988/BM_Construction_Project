@@ -2,7 +2,14 @@
 
 
 <header class="header">
-    <div class="primary-header">
+    <div class="primary-header navbar-default navbar-fixed-top">
+        <!-- <div class="container text-center">
+            <ul class="list-inline">
+                <li><a href="faq-1.html"><i class="fa fa-question-circle"></i> Ask a Question</a></li>
+                <li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
+                <li>Contact Me : 01911715356</li>
+            </ul>
+        </div> -->
     <div class="container">
     <div class="primary-header-inner">
     <div class="header-logo">
@@ -33,6 +40,7 @@
     <li><a href="blog-single.html">Blog Single</a></li>
     </ul>
     </li>
+    <li><a href="{% url 'book' %}">BookStore</a></li>
     <li><a href="{% url 'contact' %}">Contact</a></li>
     </ul>
     </div>

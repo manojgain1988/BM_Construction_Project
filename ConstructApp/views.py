@@ -3,6 +3,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect, get_object_or_404
 from.models import Setting,ContactForm,ContactMessage
 from BmApp. models import ConstructionCategory, ConstructionProject
+from servicesapp.models import Service,OurTeam
+
 # Create your views here.
 
 
@@ -10,10 +12,11 @@ from BmApp. models import ConstructionCategory, ConstructionProject
 def Home(request):
     setting = get_object_or_404(Setting, id=1)
     sliding_image = ConstructionProject.objects.all().order_by('-id')[:4]
-    
+    services=Service.objects.all().order_by('-id')[:4]
     context={
         'setting': setting,
-        'sliding_image': sliding_image
+        'sliding_image': sliding_image,
+        'services': services,
     }
     return render(request,'homebase.html', context)
 
